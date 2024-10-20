@@ -35,6 +35,7 @@ app.post('/api/products', (req, res)=>{
     });
 });
 
+//Editar producto
 app.put('/api/products/:id', (req, res)=>{
     const {id} = req.params;
     const {nombre, precio, cantidad} = req.body;
@@ -52,6 +53,7 @@ app.put('/api/products/:id', (req, res)=>{
     });
 });
 
+//Eliminar producto
 app.delete('/api/products/:id', (req, res)=>{
     const {id} = req.params;
     const query = 'DELETE FROM producto Where idproducto = ?';
